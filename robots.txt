@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kin-brew-stand.com/sitemap.xml
