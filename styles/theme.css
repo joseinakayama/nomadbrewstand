@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@400;500;600;700&display=swap');
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+}
+
+body {
+  font-family: 'Shippori Mincho', 'Noto Sans JP', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', 'Shippori Mincho', serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.animate-fadeIn { animation: fadeIn 1s ease-out forwards; }
+.animate-slideInUp { animation: slideInUp 1s ease-out forwards; }
+.animate-slideInLeft { animation: slideInLeft 1s ease-out forwards; }
+.animate-slideInRight { animation: slideInRight 1s ease-out forwards; }
+.animate-bounce-subtle { animation: bounce-subtle 2s infinite ease-in-out; }
+
+/* Staggered delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8977E;
+}
+
+/* Utilities */
+.text-accent { color: #B8977E; }
+.bg-accent { background-color: #B8977E; }
+.border-accent { border-color: #B8977E; }
+
+.bg-primary { background-color: #0A0A0A; }
+.bg-secondary { background-color: #1C1C1C; }
+
+.glass-panel {
+  background: rgba(28, 28, 28, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.image-overlay {
+  position: relative;
+}
+.image-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.8) 100%);
+  pointer-events: none;
+}
