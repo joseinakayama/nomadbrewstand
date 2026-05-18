@@ -44,24 +44,63 @@
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "Organization",
-            "@id": "https://kin-brew-stand.com/#organization",
+            "@type": "LocalBusiness",
+            "@id": "https://kin-brew-stand.com/#localbusiness",
+            "name": "KIN BREW STAND",
+            "alternateName": "キン ブリュー スタンド",
+            "url": "https://kin-brew-stand.com/",
+            "logo": "https://kin-brew-stand.com/img/favicon.svg",
+            "image": "https://kin-brew-stand.com/img/hero.jpg",
+            "description": "関東を中心に全国応相談で、バリスタ派遣、機材込みのコーヒー提供、ラテアート、オリジナルドリンクに対応する出張コーヒーケータリングサービスです。",
+            "email": "info@kin-brew-stand.com",
+            "priceRange": "¥¥",
+            "foundingDate": "2026",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "JP",
+              "addressRegion": "関東"
+            },
+            "areaServed": [
+              {"@type": "AdministrativeArea", "name": "東京都"},
+              {"@type": "AdministrativeArea", "name": "神奈川県"},
+              {"@type": "AdministrativeArea", "name": "千葉県"},
+              {"@type": "AdministrativeArea", "name": "埼玉県"},
+              {"@type": "Country", "name": "日本"}
+            ],
+            "knowsAbout": [
+              "コーヒー出張",
+              "バリスタ派遣",
+              "コーヒーケータリング",
+              "ラテアート",
+              "イベントケータリング",
+              "結婚式ケータリング",
+              "展示会ケータリング"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "サービス一覧",
+              "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "東京のバリスタ派遣", "url": "https://kin-brew-stand.com/tokyo-barista.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "東京のコーヒーケータリング", "url": "https://kin-brew-stand.com/tokyo-coffee-catering.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "展示会のコーヒー出張", "url": "https://kin-brew-stand.com/exhibition-coffee.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "企業イベントのバリスタ派遣", "url": "https://kin-brew-stand.com/corporate-event-barista.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "結婚式のコーヒー出張", "url": "https://kin-brew-stand.com/wedding-coffee.html"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ラテアート出張", "url": "https://kin-brew-stand.com/latte-art-catering.html"}}
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://kin-brew-stand.com/#website",
             "url": "https://kin-brew-stand.com/",
             "name": "KIN BREW STAND",
-            "description": "関東を中心に全国応相談で、バリスタ派遣、機材込みのコーヒー提供、ラテアート、オリジナルドリンクに対応する出張コーヒーケータリングサービスです。",
-            "areaServed": [
-              {
-                "@type": "AdministrativeArea",
-                "name": "関東"
-              },
-              {
-                "@type": "Country",
-                "name": "日本"
-              }
-            ]
+            "description": "コーヒー出張・バリスタ出張のKIN BREW STAND",
+            "publisher": {"@id": "https://kin-brew-stand.com/#localbusiness"},
+            "inLanguage": "ja-JP"
           },
           {
             "@type": "Service",
+            "@id": "https://kin-brew-stand.com/#service",
             "name": "コーヒー出張・バリスタ出張サービス",
             "serviceType": [
               "コーヒー出張",
@@ -69,11 +108,7 @@
               "バリスタ派遣",
               "コーヒーケータリング"
             ],
-            "provider": {
-              "@type": "Organization",
-              "@id": "https://kin-brew-stand.com/#organization",
-              "name": "KIN BREW STAND"
-            },
+            "provider": {"@id": "https://kin-brew-stand.com/#localbusiness"},
             "areaServed": "関東中心・全国応相談",
             "description": "展示会、企業イベント、開店イベント、結婚式、パーティーに、プロのバリスタと機材を持ち込み、その場でコーヒーやカフェラテ、ラテアート、オリジナルドリンクを提供します。"
           },
