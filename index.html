@@ -55,6 +55,8 @@
             "email": "info@kin-brew-stand.com",
             "priceRange": "¥¥",
             "foundingDate": "2026",
+            "founder": {"@id": "https://kin-brew-stand.com/profile.html#person"},
+            "employee": {"@id": "https://kin-brew-stand.com/profile.html#person"},
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "JP",
@@ -87,6 +89,23 @@
                 {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "結婚式のコーヒー出張", "url": "https://kin-brew-stand.com/wedding-coffee.html"}},
                 {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ラテアート出張", "url": "https://kin-brew-stand.com/latte-art-catering.html"}}
               ]
+            },
+            "affiliation": {"@id": "https://www.instagram.com/oma_ikejiri/#restaurant"}
+          },
+          {
+            "@type": "Restaurant",
+            "@id": "https://www.instagram.com/oma_ikejiri/#restaurant",
+            "name": "OMA",
+            "url": "https://www.instagram.com/oma_ikejiri/",
+            "sameAs": ["https://www.instagram.com/oma_ikejiri/"],
+            "image": "https://kin-brew-stand.com/img/oma-logo.webp",
+            "logo": "https://kin-brew-stand.com/img/oma-logo.webp",
+            "description": "東京・池尻大橋のレストラン。KIN BREW STAND のコーヒー・ドリンクメニューを監修。",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "JP",
+              "addressRegion": "東京都",
+              "addressLocality": "目黒区"
             }
           },
           {
@@ -333,6 +352,30 @@
                   </svg>
                 </button>
               </div>
+            </div>
+          </section>
+
+          <section class="w-full bg-[#0D0D0D] border-y border-white/10 py-6 md:py-8" id="supervised-bar">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+              <a
+                href="https://www.instagram.com/oma_ikejiri/"
+                target="_blank"
+                rel="noopener"
+                class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 group"
+                style="text-decoration:none;color:inherit">
+                <span class="text-accent tracking-[0.3em] text-xs md:text-sm">SUPERVISED BY</span>
+                <div class="flex items-center gap-4">
+                  <img
+                    src="img/oma-logo.webp"
+                    alt="OMA 池尻大橋 ロゴ"
+                    class="block flex-shrink-0 object-contain w-auto"
+                    style="height: 48px;"
+                    loading="lazy"/>
+                  <span class="font-serif text-sm md:text-base text-white group-hover:text-accent transition-colors tracking-wide">
+                    池尻大橋のレストラン "OMA" 監修
+                  </span>
+                </div>
+              </a>
             </div>
           </section>
 
@@ -1079,6 +1122,46 @@
             </div>
           </section>
 
+          <section class="w-full bg-primary py-16 md:py-20 border-t border-white/5" id="supervised">
+            <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+              <div class="text-center mb-12">
+                <p class="text-accent tracking-[0.3em] text-xs md:text-sm mb-4">SUPERVISED BY</p>
+                <h2 class="font-serif text-xl md:text-3xl lg:text-4xl text-white tracking-wide leading-[1.5]">
+                  池尻大橋のレストラン<br class="lg:hidden"/>「OMA」が監修
+                </h2>
+                <p class="text-gray-300 tracking-widest text-xs md:text-sm mt-4">
+                  コーヒーとドリンクメニューを監修
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+                <div class="flex justify-center md:justify-end md:pr-8">
+                  <a
+                    href="https://www.instagram.com/oma_ikejiri/"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="OMA 公式Instagramを開く"
+                    class="block transition-opacity hover:opacity-70">
+                    <img
+                      src="img/oma-logo.webp"
+                      alt="OMA 池尻大橋 ロゴ"
+                      class="h-auto object-contain"
+                      style="width: 130px;"
+                      loading="lazy"/>
+                  </a>
+                </div>
+
+                <div class="md:border-l md:border-white/10 md:pl-12 text-center md:text-left">
+                  <h3 class="text-accent tracking-[0.3em] text-xs mb-6">監修内容</h3>
+                  <ul class="space-y-4 text-gray-200 font-light tracking-[0.08em] text-base md:text-lg" style="font-family:'Shippori Mincho', serif;">
+                    <li>コーヒー監修</li>
+                    <li>ドリンクメニュー監修</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </main>
 
         <footer class="w-full bg-[#050505] py-16 border-t border-white/5">
@@ -1109,6 +1192,7 @@
                   <a class="hover:text-white transition-colors" href="corporate-event-barista.html">企業イベントバリスタ</a>
                   <a class="hover:text-white transition-colors" href="wedding-coffee.html">結婚式コーヒー出張</a>
                   <a class="hover:text-white transition-colors" href="latte-art-catering.html">ラテアート出張</a>
+                  <a class="hover:text-white transition-colors" href="profile.html">運営者プロフィール</a>
                 </div>
                 <div class="flex flex-wrap gap-x-6 gap-y-2 justify-center md:justify-end text-sm text-gray-500 tracking-wider">
                   <a class="hover:text-white transition-colors" href="privacy.html">PRIVACY POLICY</a>
@@ -1117,7 +1201,17 @@
                 </div>
               </div>
             </div>
-            <div class="mt-16 pt-8 border-t border-white/5 text-center">
+            <div class="mt-16 pt-8 border-t border-white/5 text-center space-y-3">
+              <p class="text-gray-500 text-xs tracking-[0.3em]">
+                SUPERVISED BY
+                <a
+                  href="https://www.instagram.com/oma_ikejiri/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-accent hover:text-white transition-colors mx-2"
+                  style="text-decoration:none;">OMA</a>
+                (東京・池尻大橋)
+              </p>
               <p class="text-gray-600 text-sm tracking-widest">
                 &copy; 2026 KIN BREW STAND. ALL RIGHTS RESERVED.
               </p>
