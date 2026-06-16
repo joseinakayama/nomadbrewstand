@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/wedding-coffee.html",
+      "destination": "/office-coffee.html",
+      "permanent": true
+    },
+    {
+      "source": "/wedding-coffee",
+      "destination": "/office-coffee.html",
+      "permanent": true
+    }
+  ]
+}

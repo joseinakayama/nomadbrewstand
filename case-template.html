@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================================
+  イベント実績ページ テンプレート
+  ===========================================================================
+  使い方:
+    1. このファイルを `case-{slug}.html` でコピー（例: case-bigsite-exhibition-2026.html）
+    2. ファイル内の {{}} を全て差し替え
+    3. sitemap.xml に追加（priority 0.7）
+    4. 関連する SEO LP の「TRUSTED RESULTS」「実績」セクションから内部リンクを張る
+    5. 公開後にGSCのインデックス申請
+
+  差し替え必須プレースホルダ:
+    {{TITLE}}              ページタイトル（〇〇展示会でコーヒーを200名に提供 等）
+    {{SLUG}}               URL末尾（bigsite-exhibition-2026 等）
+    {{META_DESC}}          meta description（120〜140字）
+    {{HERO_IMG_URL}}       ヒーロー画像URL（推奨 1600×900px webp）
+    {{EVENT_NAME}}         案件名（〇〇展示会 / △△社 周年パーティー）
+    {{EVENT_DATE}}         開催日（2026-04-15 形式）
+    {{EVENT_DATE_DISPLAY}} 表示用日付（2026年4月15日）
+    {{VENUE}}              会場名（東京ビッグサイト 西展示棟 等）
+    {{GUEST_COUNT}}        参加者規模（約200名）
+    {{CUPS_SERVED}}        提供杯数（約180杯）
+    {{DURATION}}           提供時間（5時間）
+    {{ORGANIZER}}          主催者（公開許諾済みなら社名、未許諾なら「IT系企業様」等）
+    {{CATEGORY}}           分類タグ（企業イベント / オフィス内カフェ / 展示会・新製品発表会 / ラテアート）
+    {{RELATED_LP_URL}}     最も近い SEO LP の URL
+    {{RELATED_LP_NAME}}    そのLP名
+  ===========================================================================
+-->
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="google-site-verification" content="CAPxAKlNbHM6rNiv1caAQM5U3VAvDpaFXAcSjMBrHOE" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G66LVNX0NV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-G66LVNX0NV");
+    </script>
+    <title>{{TITLE}} | KIN BREW STAND 実績</title>
+    <meta content="{{META_DESC}}" name="description"/>
+    <meta content="index, follow, max-image-preview:large" name="robots"/>
+    <link href="https://kin-brew-stand.com/case-{{SLUG}}.html" rel="canonical"/>
+    <meta content="{{TITLE}} | KIN BREW STAND 実績" property="og:title"/>
+    <meta content="{{META_DESC}}" property="og:description"/>
+    <meta content="article" property="og:type"/>
+    <meta content="https://kin-brew-stand.com/case-{{SLUG}}.html" property="og:url"/>
+    <meta content="KIN BREW STAND" property="og:site_name"/>
+    <meta content="ja_JP" property="og:locale"/>
+    <meta content="{{HERO_IMG_URL}}" property="og:image"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="{{HERO_IMG_URL}}" name="twitter:image"/>
+    <link href="img/favicon.svg" rel="icon" type="image/svg+xml"/>
+    <link href="img/favicon.svg" rel="apple-touch-icon"/>
+    <link href="styles/base.css" rel="stylesheet"/>
+    <link href="styles/tailwind.generated.css" rel="stylesheet"/>
+    <link href="styles/editor-overlays.css" rel="stylesheet"/>
+    <link href="styles/theme.css" rel="stylesheet"/>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "@id": "https://kin-brew-stand.com/case-{{SLUG}}.html#article",
+            "headline": "{{TITLE}}",
+            "description": "{{META_DESC}}",
+            "image": "{{HERO_IMG_URL}}",
+            "datePublished": "{{EVENT_DATE}}",
+            "dateModified": "{{EVENT_DATE}}",
+            "author": {"@id": "https://kin-brew-stand.com/profile.html#person"},
+            "publisher": {"@id": "https://kin-brew-stand.com/#localbusiness"},
+            "mainEntityOfPage": "https://kin-brew-stand.com/case-{{SLUG}}.html",
+            "articleSection": "{{CATEGORY}}"
+          },
+          {
+            "@type": "Event",
+            "name": "{{EVENT_NAME}} コーヒー出張",
+            "startDate": "{{EVENT_DATE}}",
+            "location": {
+              "@type": "Place",
+              "name": "{{VENUE}}",
+              "address": {"@type": "PostalAddress", "addressCountry": "JP"}
+            },
+            "organizer": {"@id": "https://kin-brew-stand.com/#localbusiness"},
+            "performer": {"@id": "https://kin-brew-stand.com/profile.html#person"}
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://kin-brew-stand.com/"},
+              {"@type": "ListItem", "position": 2, "name": "実績"},
+              {"@type": "ListItem", "position": 3, "name": "{{TITLE}}"}
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="min-h-screen bg-primary text-white selection:bg-accent selection:text-white pb-20 md:pb-0">
+      <header class="fixed top-0 w-full z-50 bg-[#0A0A0A]/70 backdrop-blur-md border-b border-white/10 py-5">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex justify-between items-center">
+          <a class="font-serif text-xl md:text-2xl tracking-widest text-white hover:text-accent transition-colors" href="index.html" style="text-decoration:none;color:inherit">KIN BREW STAND</a>
+          <nav class="hidden md:flex items-center gap-6 text-sm tracking-widest text-gray-200">
+            <a class="hover:text-accent transition-colors" href="index.html#services">SERVICES</a>
+            <a class="hover:text-accent transition-colors" href="profile.html">PROFILE</a>
+            <a class="px-5 py-2 border border-accent text-accent hover:bg-accent hover:text-white transition-colors" href="index.html#contact" style="text-decoration:none;color:inherit">CONTACT</a>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <!-- HERO -->
+        <section class="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden bg-primary py-28">
+          <div class="absolute inset-0 z-0">
+            <img alt="{{EVENT_NAME}} の現場でコーヒーを提供するバリスタ" class="w-full h-full object-cover opacity-50" fetchpriority="high" src="{{HERO_IMG_URL}}"/>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/70 via-[#0A0A0A]/45 to-[#0A0A0A]"></div>
+          </div>
+          <div class="relative z-10 max-w-5xl mx-auto px-4 md:px-6 lg:px-8 text-center mt-12">
+            <p class="text-accent tracking-[0.3em] text-base md:text-lg mb-6">CASE STUDY — {{CATEGORY}}</p>
+            <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl text-white tracking-[0.08em] leading-tight mb-8">{{TITLE}}</h1>
+            <p class="text-gray-200 text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto">{{EVENT_DATE_DISPLAY}}　{{VENUE}}　参加者 {{GUEST_COUNT}}</p>
+          </div>
+        </section>
+
+        <!-- OVERVIEW（数字で実績を可視化） -->
+        <section class="w-full bg-secondary py-20 md:py-28">
+          <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              <div class="bg-primary border border-accent/30 p-6 text-center">
+                <p class="text-accent text-xs tracking-widest mb-2">EVENT</p>
+                <p class="text-white font-serif text-lg md:text-xl">{{CATEGORY}}</p>
+              </div>
+              <div class="bg-primary border border-accent/30 p-6 text-center">
+                <p class="text-accent text-xs tracking-widest mb-2">GUESTS</p>
+                <p class="text-white font-serif text-lg md:text-xl">{{GUEST_COUNT}}</p>
+              </div>
+              <div class="bg-primary border border-accent/30 p-6 text-center">
+                <p class="text-accent text-xs tracking-widest mb-2">CUPS SERVED</p>
+                <p class="text-white font-serif text-lg md:text-xl">{{CUPS_SERVED}}</p>
+              </div>
+              <div class="bg-primary border border-accent/30 p-6 text-center">
+                <p class="text-accent text-xs tracking-widest mb-2">DURATION</p>
+                <p class="text-white font-serif text-lg md:text-xl">{{DURATION}}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BRIEF（依頼背景） -->
+        <section class="w-full bg-primary py-20 md:py-28 border-t border-white/5">
+          <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+            <p class="text-accent tracking-widest mb-4">BRIEF</p>
+            <h2 class="font-serif text-2xl md:text-4xl text-white mb-8">依頼の背景</h2>
+            <div class="space-y-5 text-gray-200 font-light leading-relaxed" style="font-family:'Shippori Mincho', serif;">
+              <!-- TODO: 主催者がどんな課題・目的で依頼したかを2〜3段落で記載 -->
+              <p>{{ORGANIZER}} 様より、{{EVENT_NAME}} における来場者向けのコーヒーサービスについてご相談をいただきました。</p>
+              <p>会場の制約条件、来場ピーク時間、ゲスト層を踏まえて、提供方法を一緒に設計しました。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- VENUE CONDITIONS（会場条件） -->
+        <section class="w-full bg-secondary py-20 md:py-28 border-t border-white/5">
+          <div class="max-w-5xl mx-auto px-4 md:px-6 lg:px-8">
+            <p class="text-accent tracking-widest mb-4 text-center">VENUE CONDITIONS</p>
+            <h2 class="font-serif text-2xl md:text-4xl text-white mb-10 text-center">会場条件と事前設計</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- TODO: 実際の条件を記載。具体的なほどE-E-A-T評価が上がる -->
+              <div class="glass-panel p-6">
+                <p class="text-accent text-sm tracking-widest mb-2">POWER</p>
+                <h3 class="font-serif text-lg text-white mb-2">電源</h3>
+                <p class="text-gray-200 font-light leading-relaxed text-sm">100V / 15A × 2系統を確保。エスプレッソマシン用とグラインダー用で系統を分離。</p>
+              </div>
+              <div class="glass-panel p-6">
+                <p class="text-accent text-sm tracking-widest mb-2">WATER</p>
+                <h3 class="font-serif text-lg text-white mb-2">給排水</h3>
+                <p class="text-gray-200 font-light leading-relaxed text-sm">給湯室から30m。給水・排水タンクを持参し独立運用。</p>
+              </div>
+              <div class="glass-panel p-6">
+                <p class="text-accent text-sm tracking-widest mb-2">SETUP</p>
+                <h3 class="font-serif text-lg text-white mb-2">設営時間</h3>
+                <p class="text-gray-200 font-light leading-relaxed text-sm">開始90分前に搬入、60分で設営完了、30分でマシン暖気と試運転。</p>
+              </div>
+              <div class="glass-panel p-6">
+                <p class="text-accent text-sm tracking-widest mb-2">FLOW</p>
+                <h3 class="font-serif text-lg text-white mb-2">提供導線</h3>
+                <p class="text-gray-200 font-light leading-relaxed text-sm">入口導線から自然に立ち寄れる位置にカウンター配置。待機列が他ブースを塞がない動線設計。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TIMELINE（当日の時系列） -->
+        <section class="w-full bg-primary py-20 md:py-28 border-t border-white/5">
+          <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+            <p class="text-accent tracking-widest mb-4 text-center">TIMELINE</p>
+            <h2 class="font-serif text-2xl md:text-4xl text-white mb-10 text-center">当日の流れ</h2>
+            <div class="space-y-6">
+              <!-- TODO: 実際の時系列を記載。3〜6ステップ程度 -->
+              <div class="flex gap-6 items-start">
+                <div class="text-accent font-serif text-xl md:text-2xl tracking-widest w-24 shrink-0">09:00</div>
+                <div class="flex-1 border-l border-accent/30 pl-6 pb-6">
+                  <h3 class="text-white font-serif text-lg mb-1">搬入・設営開始</h3>
+                  <p class="text-gray-200 font-light leading-relaxed text-sm">サービスエレベーターで機材搬入。会場側スタッフと進行確認。</p>
+                </div>
+              </div>
+              <div class="flex gap-6 items-start">
+                <div class="text-accent font-serif text-xl md:text-2xl tracking-widest w-24 shrink-0">10:30</div>
+                <div class="flex-1 border-l border-accent/30 pl-6 pb-6">
+                  <h3 class="text-white font-serif text-lg mb-1">試運転・準備完了</h3>
+                  <p class="text-gray-200 font-light leading-relaxed text-sm">マシン暖気を完了し、抽出パラメータを当日の豆・気温に合わせて調整。</p>
+                </div>
+              </div>
+              <div class="flex gap-6 items-start">
+                <div class="text-accent font-serif text-xl md:text-2xl tracking-widest w-24 shrink-0">11:00</div>
+                <div class="flex-1 border-l border-accent/30 pl-6 pb-6">
+                  <h3 class="text-white font-serif text-lg mb-1">提供開始</h3>
+                  <p class="text-gray-200 font-light leading-relaxed text-sm">開場と同時にスタート。ゲストとの会話を交えながら一杯ずつ抽出。</p>
+                </div>
+              </div>
+              <div class="flex gap-6 items-start">
+                <div class="text-accent font-serif text-xl md:text-2xl tracking-widest w-24 shrink-0">16:00</div>
+                <div class="flex-1 border-l border-accent/30 pl-6 pb-6">
+                  <h3 class="text-white font-serif text-lg mb-1">提供終了・撤収</h3>
+                  <p class="text-gray-200 font-light leading-relaxed text-sm">最後の一杯を提供後、30分で撤収完了。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="w-full bg-secondary py-20 md:py-28 border-t border-white/5">
+          <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <p class="text-accent tracking-widest mb-4 text-center">GALLERY</p>
+            <h2 class="font-serif text-2xl md:text-4xl text-white mb-10 text-center">当日の様子</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <!-- TODO: 5枚以上、案件ごとに写真差し替え。各 alt 属性に状況描写を入れる -->
+              <img alt="{{EVENT_NAME}} の会場に設営したコーヒーカウンター" class="w-full aspect-[4/3] object-cover" loading="lazy" src="{{HERO_IMG_URL}}"/>
+              <img alt="バリスタがエスプレッソを抽出する様子" class="w-full aspect-[4/3] object-cover" loading="lazy" src="{{HERO_IMG_URL}}"/>
+              <img alt="提供したラテアートの完成品" class="w-full aspect-[4/3] object-cover" loading="lazy" src="{{HERO_IMG_URL}}"/>
+              <img alt="来場者と会話しながら一杯を手渡す場面" class="w-full aspect-[4/3] object-cover" loading="lazy" src="{{HERO_IMG_URL}}"/>
+              <img alt="提供したドリンクメニューと豆の紹介" class="w-full aspect-[4/3] object-cover" loading="lazy" src="{{HERO_IMG_URL}}"/>
+              <img alt="ピーク時間帯のカウンター前の様子" class="w-full aspect-[4/3] object-cover" loading="lazy" src="{{HERO_IMG_URL}}"/>
+            </div>
+          </div>
+        </section>
+
+        <!-- TESTIMONIAL（主催者の声） -->
+        <section class="w-full bg-primary py-20 md:py-28 border-t border-white/5">
+          <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+            <p class="text-accent tracking-widest mb-4 text-center">TESTIMONIAL</p>
+            <h2 class="font-serif text-2xl md:text-4xl text-white mb-10 text-center">主催者の声</h2>
+            <!-- TODO: 主催者から許諾済みのコメントを掲載。許諾が無い場合はこのセクション削除 -->
+            <div class="glass-panel p-8 md:p-12">
+              <p class="text-gray-200 font-light leading-relaxed mb-6" style="font-family:'Shippori Mincho', serif;">「会場の電源条件が厳しい中、事前のヒアリングで提供方法を一緒に設計してもらえたのが安心でした。当日も提供スピードが安定していて、来場者から好評でした。」</p>
+              <p class="text-accent tracking-widest text-sm">— {{ORGANIZER}} 様　ご担当者</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="w-full bg-secondary py-20 md:py-28 border-t border-white/5">
+          <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+            <h2 class="font-serif text-2xl md:text-4xl text-white mb-6">同様のイベントを<br class="hidden md:block"/>検討中の方へ</h2>
+            <p class="text-gray-200 font-light leading-relaxed mb-8 max-w-3xl mx-auto">日程、会場、想定人数が未定でも構いません。決まっている範囲でお送りください。バリスタが直接ヒアリングし、最適な提供方法をご提案します。</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+              <a class="px-10 py-4 bg-accent text-white hover:bg-[#A6856C] transition-colors tracking-widest" href="index.html#contact" style="text-decoration:none;color:inherit">無料で見積もり相談する</a>
+              <a class="px-10 py-4 border border-white/30 text-white hover:border-accent hover:text-accent transition-colors tracking-widest" href="{{RELATED_LP_URL}}" style="text-decoration:none;color:inherit">{{RELATED_LP_NAME}} のサービス詳細</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="w-full bg-[#050505] py-10 border-t border-white/5 text-center text-gray-500 text-sm tracking-widest">
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          <a class="hover:text-white transition-colors" href="index.html">KIN BREW STAND HOME</a>
+          <a class="hover:text-white transition-colors" href="profile.html">運営者プロフィール</a>
+          <a class="hover:text-white transition-colors" href="privacy.html">PRIVACY POLICY</a>
+          <a class="hover:text-white transition-colors" href="terms.html">TERMS OF SERVICE</a>
+          <a class="hover:text-white transition-colors" href="tokushoho.html">特定商取引法に基づく表記</a>
+        </div>
+      </footer>
+      <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#050505]/95 backdrop-blur-md border-t border-white/10 p-3">
+        <a class="block text-center px-4 py-3 bg-accent text-white tracking-widest text-sm" href="index.html#contact" style="text-decoration:none;color:inherit">同じようなイベントを相談する</a>
+      </div>
+    </div>
+  </body>
+</html>
