@@ -9,6 +9,16 @@
       "source": "/wedding-coffee",
       "destination": "/office-coffee.html",
       "permanent": true
+    },
+    {
+      "source": "/profile.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/profile",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }
